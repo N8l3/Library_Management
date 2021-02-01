@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mukta Vaani', sans-serif;
+}
+
+.topnav{
+    display: flexbox;
+    background: transparent;
+    background-color: rgba(150, 150, 150, 0.09);
+    /* opacity: 0; */
+    padding: 7px;
+    position: sticky;
+    border: 1px solid;
+    box-shadow: 1px 1px 1px 1px #b3b3b39d ;
+    overflow: hidden;
+}
+
+.home{
+    /* background-color: black; */
+    margin-left: 5%;   
+}
+.shop{
+    /* background-color: black; */
+    margin-left:5% ;
+}
+ 
+.aboutus{
+    /* background-color: black; */
+    margin-left:5% ;
+}
+ 
+.contact{
+    /* background-color: black; */
+    margin-left:5% ;
+}
+.search-container{
+    margin-left:5% ;
+}
+ 
+.acc{
+    /* background-color: black; */
+    display:flex;
+    margin-left:5% ;
+}
+ 
+.cart{
+    /* background-color: black; */
+    display:flex;
+    margin-left:5% ;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.topnav >div {
+    display: inline-flex;
+    /* padding-left: 90px;
+    padding-right: 90px; */
+    background-color: transparent;
+    /* opacity: 0.5; */
+}
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+}
+
+.mylogo{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    padding-top:5px ;
+}
+
+ /* Account page  */
+
+.reg-sec{
+/* background-color: aqua; */
+/* width: 50%; */
+border-style: groove;
+height: 100%;
+padding-top: 2%;
+padding-bottom: 3%;
+
+ margin-left:30%;
+ margin-right:30%;
+ box-shadow: 0px 5px #b3b3b39d;
+}
+.login-sec{
+/* background-color: aqua; */
+/* width: 50%; */
+border-style: groove;
+height:100%;
+padding-top: 2%;
+padding-bottom: 3%;
+
+ margin-left:30%;
+ margin-right:30%;
+ box-shadow: 0px 5px #b3b3b39d;
+}
+h1{
+  text-align: center;  
+}
+.lform{
+padding: 5%;
+}
+.btn.btn-sucess{
+background-color: rgb(26, 26, 26);
+color: antiquewhite;
+float: right;
+}
+.btn.btn-reset{
+    background-color: rgb(26, 26, 26);
+    color: antiquewhite;
+    float: left;
+}
+
+/* end of account page */
+
+
+
+/* footer */
+
+.footer {
+	padding-top:0%;
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f6f6f6;
+    color: rgba(0, 0, 0, 0.801);
+    text-align: center;
+}
+.top-footer{
+    display: flex;
+    width: 100%;
+}
+.footer-coll{
+    width: 25%;
+    background-color:transparent;
+    padding: 5px;
+    /* border: 1px solid; */
+}
+.bottom-footer{
+    /* text-align: left; */
+    background-color: rgb(0, 0, 0);
+    color: #ccc;
+}
+.footer-logo{
+    margin-top: 15px;
+    width: 80px;
+    background-color: transparent;
+    /* height: 80px; */
+    /* margin-right:15px ; */
+}
+.content{
+    height: 50px;
+}
+.header{
+    margin-top: 20px;
+}
+ /* footer */
