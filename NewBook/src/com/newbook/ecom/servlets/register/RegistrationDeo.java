@@ -19,7 +19,7 @@ public class RegistrationDeo {
 			ps.setString(4, user.getEmail());
 			ps.setString(5, user.getPass());
 			
-			System.out.println(ps);
+			System.out.println("Update is Successfull");
 			result = ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
