@@ -57,7 +57,7 @@
 							<i class="fas fa-lock"></i>
 							<input class="myInput" placeholder="Password" type="password" id="password" name="pass" required>
 							<!-- pattern="(?=.*\d)(?=.*[a-z])(?=.[A-Z]).{8,}"  -->
-							<div class="invalid-feedback">Password must contain atleast 1 small alphabet, 1 capitol alphabet, 1 +ve integer with password length more than 8 </div>
+							<div class="invalid-feedback"><small>Password must contain atleast  1 small alphabet, 1 capitol alphabet, 1 +ve integer with password length more than 8</small> </div>
 						</div>
 						
 						<div class="form-group">

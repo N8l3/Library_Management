@@ -1,0 +1,34 @@
+     
+ /* Admin Dashboard */
+ 
+ 
+ .Admin.container{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+.sidebar{
+    /* background-color: aquamarine; */
+}
+.sidebar >button{
+    width: 150px;
+    /* background-color:transparent; */
+    color: beige;
+    border: 0.5px solid white;
+    opacity: 0.5;
+}
+.sidebar >label{
+    /* background-color:transparent; */
+    text-align: center;
+    width: 150px;
+    color: beige;
+    border: 0.5px solid white;
+    opacity: 0.5;
+}
+button >a{
+    text-decoration: none;
+    color: black;
+}
+/* End of admin Dashboard */
+ 
+ 

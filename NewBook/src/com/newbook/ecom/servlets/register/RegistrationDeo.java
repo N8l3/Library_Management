@@ -22,7 +22,7 @@ public class RegistrationDeo {
 			System.out.println("Update is Successfull");
 			result = ps.executeUpdate();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());;
 		}
 		return result;
 	}
