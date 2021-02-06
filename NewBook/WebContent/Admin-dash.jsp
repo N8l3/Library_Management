@@ -14,8 +14,7 @@
         <div class="sidebar">
             <label> Admin Menu</label><br>
             <button class="Admin"><a class="admindash" href="#">Show Product</a></button><br>
-            <button class="Admin" data-toggle="modal" data-target="#addProduct"><a class="admindash"
-                    href="#addProduct">Add Product</a></button><br>
+            <button class="Admin" data-toggle="modal" data-target="#addProduct"><a class="admindash" href="#addProduct">Add Product</a></button><br>
             <button class="Admin"><a class="admindash" href="#">Users</a></button>
         </div>
 
@@ -85,9 +84,10 @@
                 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-Dark" data-dismiss="modal">Close</button>
-                <!--     <button type="button" class="btn btn-success">Add Product</button>
- -->             
- 					  
+                <!--    
+                 <button type="button" class="btn btn-success">Add Product</button>
+				 -->
+				                
  			   </div>
                 	<input type="submit" class= "btn btn-success" value="Add Product">
                 </form>

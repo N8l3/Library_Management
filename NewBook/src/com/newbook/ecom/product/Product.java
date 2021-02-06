@@ -12,9 +12,6 @@ public class Product  implements Serializable
 	private String name,desc,author,cat,price;
 //	private Part img;
 
-	
-
-
 	public String getName() {
 		return name;
 	}

@@ -2,6 +2,7 @@ package com.newbook.ecom.product;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.ProcessBuilder.Redirect;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 import org.omg.CORBA.portable.InputStream;
+
+import com.sun.prism.Image;
 
 /**
  * Servlet implementation class ProductDao
@@ -29,6 +32,7 @@ public class ProductDetails extends HttpServlet {
 	@Override
 		public void init() throws ServletException {
 		prdao = new ProductDao();
+		
 	}
  
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
@@ -40,10 +44,13 @@ public class ProductDetails extends HttpServlet {
 		String desc = request.getParameter("prddesc");
 		String author = request.getParameter("prdauthor");
 		String cat = request.getParameter("prdcat");
-		String price =request.getParameter("prdprice");
+		String price =request.getParameter("Prdprice");
 //		byte img =Byte.parseByte(request.getParameter("prdimg"));
 		
 //		Part p = request.getPart("prdimg"); 
+		
+		System.out.println("name:"+name+"\tdesc"+desc+"\tauthor"+author+"\tcat"+cat+"\tprice"+price);
+		
 		
 		Product prd = new Product();
 		
@@ -63,8 +70,19 @@ public class ProductDetails extends HttpServlet {
 			System.out.println(e.getMessage());
 		}
 		
-		RequestDispatcher req = request.getRequestDispatcher("Admin-dash.jsp");
-		req.include(request, response);
+		if(name.isEmpty() || price.isEmpty()|| desc.isEmpty()|| cat.isEmpty())
+		
+		{
+			RequestDispatcher req = request.getRequestDispatcher("Admin-dash.jsp");
+			req.include(request, response);
+		}
+		
+//		else {
+//			RequestDispatcher req = request.getRequestDispatcher("Admin-dash.jsp");
+//			req.forward(request, response);
+			
+//			out.print("error");
+//		}
 		
 	}
 
