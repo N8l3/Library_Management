@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class L_User implements Serializable{
 	private static final long serialVersionUID = 1L;
-	private String email, pass;
+	private String email, pass,type;
 	
 	public String getEmail() {
 		return email;
@@ -19,6 +19,12 @@ public class L_User implements Serializable{
 	}
 	public void setPass(String pass) {
 		this.pass = pass;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 	
 }

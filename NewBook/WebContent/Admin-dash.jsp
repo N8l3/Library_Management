@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="com.newbook.ecom.product.ProductDao"%>
+<%@page import="com.newbook.ecom.product.*,java.util.*" %>
+<%@page import="com.newbook.ecom.servlets.register.Db_connect" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,21 +12,36 @@
     <title>My-Book</title>
 </head>
 <body>
+<div>
 <jsp:include page="header.jsp"></jsp:include>
 </div>
  <div class="Admin container">
 
         <div class="sidebar">
             <label> Admin Menu</label><br>
-            <button class="Admin"><a class="admindash" href="#">Show Product</a></button><br>
+            <button class="Admin"><a class="admindash" href="#showprd">Show Product</a></button><br>
             <button class="Admin" data-toggle="modal" data-target="#addProduct"><a class="admindash" href="#addProduct">Add Product</a></button><br>
             <button class="Admin"><a class="admindash" href="#">Users</a></button>
         </div>
 
         <!-- ====================================================== -->
         <div class="outwindow">
-            <div class="showprd">
-
+            <div class="showprd" id="showprd" style="background-color: white; margin:10px; border: 3px solid grey;">
+            <h1 style="text-align: center;"> List Of Product </h1>
+						<%	
+							List<Product> list = ProductDao.getAllRecords();
+							request.setAttribute("list",list);
+						%>
+						<table border="1" width="90%" style="margin-left:5%;">
+						<tr><th>Name</th><th>Desc</th><th>Author</th><th>Categories</th><th>Price</th><th>Edit</th><th>Delete</th></tr>
+						<c:forEach items="${list}" var="p">
+						<tr><td>${p.getName()}</td><td>${p.getDesc()}</td><td>${p.getAuthor()}</td><td>${p.getCat()}</td><td>${p.getPrice()}</td><td><a href="editProduct.jsp?name=${p.getName()}">Edit</a></td><td><a href="deleteproduct.jsp?name=${p.getName()}">Delete</a></td></tr>
+						</c:forEach>
+						</table>
+						<br/><a href="#addProduct">Add New User</a>
+						
+						
+						
             </div>
             
             </div>
@@ -32,7 +52,7 @@
 
         </div>
         <!-- =================================================== -->
-    </div>
+    
 
 
     <!-- modal -->
@@ -83,13 +103,14 @@
                     </div>
                 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-Dark" data-dismiss="modal">Close</button>
+                    <input type="reset" class="btn btn-Danger" data-dismiss="modal" value="Close">
+                    <input type="submit" class= "btn btn-success" value="Add Product">
                 <!--    
                  <button type="button" class="btn btn-success">Add Product</button>
 				 -->
 				                
  			   </div>
-                	<input type="submit" class= "btn btn-success" value="Add Product">
+                	
                 </form>
                 </div>
                 
@@ -101,5 +122,6 @@
 
 <div id="mybookfooter">
 <jsp:include page="footer.jsp"></jsp:include>
+</div>
 </body>
 </html>

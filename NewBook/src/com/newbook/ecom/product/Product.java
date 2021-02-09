@@ -1,16 +1,11 @@
 package com.newbook.ecom.product;
 
-import java.io.Serializable;
-
-import javax.servlet.http.Part;
-
-import com.mysql.*;
 
 
-public class Product  implements Serializable
+public class Product
 {
 	private String name,desc,author,cat,price;
-//	private Part img;
+	
 
 	public String getName() {
 		return name;
@@ -46,4 +41,5 @@ public class Product  implements Serializable
 	 * public Part getImg() { return img; } public void setImg(Part p) { this.img =
 	 * p; }
 	 */
+	
 }

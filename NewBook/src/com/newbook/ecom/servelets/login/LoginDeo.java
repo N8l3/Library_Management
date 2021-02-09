@@ -6,6 +6,8 @@ import com.newbook.ecom.servlets.register.Db_connect;
 public class LoginDeo {
 	public L_User checkLogin(String email, String password) throws SQLException, ClassNotFoundException{
 		
+		L_User user = new L_User();
+		
 		Connection con = Db_connect.getCon();
 		
 		String l_query = "select * from customer where email=? and pwd=?";
@@ -15,10 +17,10 @@ public class LoginDeo {
 		
 		ResultSet result = ps.executeQuery();
 		
-		L_User user = null;
+//		L_User user = null;
 		
 		if(result.next()) {
-			user = new L_User();
+			
 			user.setEmail(email);
 		}
 		return user;

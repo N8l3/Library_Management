@@ -5,7 +5,7 @@ import java.sql.*;
 public class RegistrationDeo {
 	public int register(User user) throws ClassNotFoundException{
 		
-		String r_query = " insert into customer(name, mobile, address, email, pwd) values(?, ?, ?, ?, ?)";
+		String r_query = " insert into users (name, mobile, address, email, pwd) values(?, ?, ?, ?, ?)";
 		
 		int result = 0;
 		
@@ -19,8 +19,9 @@ public class RegistrationDeo {
 			ps.setString(4, user.getEmail());
 			ps.setString(5, user.getPass());
 			
-			System.out.println("Update is Successfull");
+			
 			result = ps.executeUpdate();
+			System.out.println("Update is Successfull");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());;
 		}
