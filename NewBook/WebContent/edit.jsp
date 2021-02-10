@@ -4,5 +4,6 @@
 
 <%
 int i=ProductDao.update(p);
-response.sendRedirect("viewproduct.jsp");
+response.sendRedirect("Admin-dash.jsp");
+out.println( "id: "+p.getId()+" is updated...");
 %>

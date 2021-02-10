@@ -1,19 +1,12 @@
-<%@page import="com.newbook.ecom.product.Product"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
+<%@page import="com.newbook.ecom.product.ProductDao"%>
+<jsp:useBean id="p" class="com.newbook.ecom.product.Product"></jsp:useBean>
+<jsp:setProperty property="*" name="p"/>
 
-</head>
-<body>
 <%@ page import="com.newbook.ecom.product.ProductDao" %>
 
 <%
-	Product p = new Product();
 	ProductDao.delete(p);
-	response.sendRedirect("viewproduct.jsp");
+	response.sendRedirect("Admin-dash.jsp");
+	out.print("<h1 style=\"color:white;\">The Product id :"+p.getId()+"is deleted Form the database.</h1>");
 %>
 
-</body>
-</html>

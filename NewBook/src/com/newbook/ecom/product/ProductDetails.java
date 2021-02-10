@@ -69,13 +69,10 @@ public class ProductDetails extends HttpServlet {
 		{
 			System.out.println(e.getMessage());
 		}
-		
-		if(name.isEmpty() || price.isEmpty()|| desc.isEmpty()|| cat.isEmpty())
-		
-		{
-			RequestDispatcher req = request.getRequestDispatcher("Admin-dash.jsp");
-			req.include(request, response);
-		}
+	
+		RequestDispatcher req = request.getRequestDispatcher("Admin-dash.jsp");
+		req.include(request, response);
+		return;
 		
 //		else {
 //			RequestDispatcher req = request.getRequestDispatcher("Admin-dash.jsp");

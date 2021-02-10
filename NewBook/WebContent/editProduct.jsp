@@ -7,15 +7,16 @@
 </head>
 <body>
 <%@page import="com.newbook.ecom.product.ProductDao"%>
+<%@ page import="com.newbook.ecom.product.Product" %>
 
 <%
-String name=request.getParameter("name");
-Product p = ProductDao.getRecordById(name);
+String id=request.getParameter("id");
+Product p = ProductDao.getRecordById(Integer.parseInt(id));
 %>
 
 <h1>Edit  Product Form</h1>
-<form action="editPord.jsp" method="post">
-<input type="hidden" name="name" value="<%=p.getName() %>"/>
+<form action="edit.jsp" method="post">
+<input type="hidden" name="name" value="<%=p.getId() %>"/>
 <table>
 <tr><td>Name:</td><td><input type="text" name="name" value="<%= p.getName()%>"/></td></tr>
 <tr><td>Desc:</td><td><input type="Text" name="desc" value="<%= p.getDesc()%>"/></td></tr>
