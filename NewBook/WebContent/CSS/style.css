@@ -9,20 +9,21 @@
 }
 .sidebar{
     /* background-color: aquamarine; */
+    width:100%;
 }
 .sidebar >button{
-    width: 150px;
+    width: 100%;
     /* background-color:transparent; */
     color: beige;
-    border: 0.5px solid white;
+    border: 5px solid white;
     opacity: 0.5;
 }
 .sidebar >label{
     /* background-color:transparent; */
     text-align: center;
-    width: 150px;
+    width: 100%;
     color: beige;
-    border: 0.5px solid white;
+    /* border: 0.5px solid white; */
     opacity: 0.5;
 }
 button >a{

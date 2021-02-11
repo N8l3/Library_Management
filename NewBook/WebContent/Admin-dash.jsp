@@ -33,13 +33,9 @@
 							request.setAttribute("list",list);
 						%>
 						<table border="1" width="90%" style="margin-left:5%;">
-						<!-- <tr><th>Id</th><th>Name</th><th>Desc</th><th>Author</th><th>Categories</th><th>Price</th><th>Edit</th><th>Delete</th></tr> -->
-						
 						<tr><th>Id</th><th>Name</th><th>Desc</th><th>Author</th><th>Category</th><th>Price</th><th>Edit</th><th>Delete</th></tr>	
 						<c:forEach items="${list}" var="p">
-						
-							<tr><td>${p.getId()}</td><td>${p.getName()}</td><td>${p.getDesc()}</td><td>${p.getAuthor()}</td><td>${p.getCat()}</td><td>${p.getPrice()}</td><td><a href="editProduct.jsp?id=${p.getId()}">Edit</a></td><td><a href="deleteproduct.jsp?id=${p.getId()}">Delete</a></td></tr>
-						
+							<tr><td>${p.getId()}</td><td>${p.getName()}</td><td>${p.getDes()}</td><td>${p.getAuthor()}</td><td>${p.getCat()}</td><td>${p.getPrice()}</td><td><a href="editProduct.jsp?id=${p.getId()}">Edit</a></td><td><a href="deleteproduct.jsp?id=${p.getId()}">Delete</a></td></tr>						
 						</c:forEach>
 						</table>
 						<!-- <br/><a href="#addProduct">Add New User</a> -->

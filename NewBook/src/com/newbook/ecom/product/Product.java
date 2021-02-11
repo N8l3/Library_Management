@@ -4,8 +4,7 @@ package com.newbook.ecom.product;
 
 public class Product
 {
-	private String name,desc,author,cat,price;
-	
+	private String name,des,author,cat,price;
 	private int id;
 	
 	public int getId() {
@@ -20,11 +19,11 @@ public class Product
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDesc() {
-		return desc;
+	public String getDes() {
+		return des;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDes(String des) {
+		this.des = des;
 	}
 	public String getAuthor() {
 		return author;

@@ -41,7 +41,7 @@ public class ProductDetails extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		String name = request.getParameter("prdname");
-		String desc = request.getParameter("prddesc");
+		String des = request.getParameter("prddesc");
 		String author = request.getParameter("prdauthor");
 		String cat = request.getParameter("prdcat");
 		String price =request.getParameter("Prdprice");
@@ -49,13 +49,13 @@ public class ProductDetails extends HttpServlet {
 		
 //		Part p = request.getPart("prdimg"); 
 		
-		System.out.println("name:"+name+"\tdesc"+desc+"\tauthor"+author+"\tcat"+cat+"\tprice"+price);
+		System.out.println("name:"+name+"\tdesc"+des+"\tauthor"+author+"\tcat"+cat+"\tprice"+price);
 		
 		
 		Product prd = new Product();
 		
 		prd.setName(name);
-		prd.setDesc(desc);
+		prd.setDes(des);
 		prd.setAuthor(author);
 		prd.setCat(cat);
 		prd.setPrice(price);
